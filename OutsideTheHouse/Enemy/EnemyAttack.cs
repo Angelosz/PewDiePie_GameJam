@@ -9,7 +9,7 @@ public class EnemyAttack : MonoBehaviour
 	void Start()
 	{
 		attackSpeed = 2f;
-		attackSpeedTimer = 0;
+		attackSpeedTimer = 1.2f;
 		myEnemyScriptEnemy = this.GetComponent<Enemy>();
 	}
 

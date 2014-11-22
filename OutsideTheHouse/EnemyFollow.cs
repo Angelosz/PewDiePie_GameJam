@@ -27,8 +27,8 @@ public class EnemyFollow : MonoBehaviour
 	private void followPlayer()
 	{
 		checkIfBesides();
-		if(notBesidesHim)
-			transform.position = Vector3.MoveTowards(transform.position, myEnemyScriptEnemy.player.transform.position, myEnemyScriptEnemy.getSpeed());
+		if (notBesidesHim)
+			this.GetComponent<NavMeshAgent>().destination = myEnemyScriptEnemy.player.transform.position;
 	}
 
 	private void checkIfBesides()

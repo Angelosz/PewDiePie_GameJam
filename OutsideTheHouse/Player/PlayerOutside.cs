@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerOutside : MonoBehaviour 
 {
 	public int healthPoints;
 
-	void Start()
-	{
-		healthPoints = 3;
-	}
-
 	public void ReceiveDamage()
 	{
+		this.GetComponent<ChangeMaterial>().ChangeMaterialToRed();
 		healthPoints--;
-		Debug.Log(healthPoints);
+		if (healthPoints <= 0)
+		{
+			Application.LoadLevel("Outside");
+		}
 	}
 }

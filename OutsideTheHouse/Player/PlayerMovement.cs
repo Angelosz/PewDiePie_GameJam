@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-	private readonly int speed = 3;
+	public int speed;
 	
 	void Update () 
 	{

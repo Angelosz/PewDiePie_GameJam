@@ -16,7 +16,6 @@ public class LightAlarm : MonoBehaviour
 		if (other.transform.tag == "Player")
 		{
 			AlarmEveryone();
-			other.GetComponent<PlayerOutside>().ReceiveDamage();
 		}
 	}
 

@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
 
 	public void ReceiveDamage()
 	{
+		this.GetComponent<ChangeMaterial>().ChangeMaterialToRed();
 		healthPoints--;
 		if (healthPoints <= 0)
 		{
